@@ -1,3 +1,5 @@
+from Coin import Coin
+
 class CoffeMachine:
     def __init__(self):
         pass
@@ -13,3 +15,6 @@ class CoffeMachine:
     
     def insertOneEuro(self):
         pass
+    
+    def insertCoin(self, coinValue):
+        Coin(coinValue)

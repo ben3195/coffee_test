@@ -7,7 +7,8 @@ class CoffeMachineTest(unittest.TestCase):
         # ETANT DONNE une machine à café
         machine = CoffeMachine()
         # QUAND on insère une pièce de 50cts
-        machine.insert50cts()
+        fifty_cts = 50
+        machine.insertCoin(fifty_cts)
         # ALORS un café est servi
         machine.serveCoffee()
         # ET l'argent est encaissé
@@ -17,7 +18,8 @@ class CoffeMachineTest(unittest.TestCase):
         # ETANT DONNE une machine à café
         machine = CoffeMachine()
         # QUAND on insère une pièce de un euro
-        machine.insertOneEuro()
+        one_euro = 100
+        machine.insertCoin(one_euro)
         # ALORS la machine sert un café
         machine.serveCoffee()
         # ET l'argent est encaissé
