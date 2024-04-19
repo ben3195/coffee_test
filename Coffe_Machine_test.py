@@ -1,19 +1,24 @@
 import unittest
-from coffe_machine.CoffeeMachine import CoffeMachine
+from CoffeeMachine import CoffeMachine
 
 class CoffeMachineTest(unittest.TestCase):
     
     def test_cas_nominal(self):
-        # Etant donné une machine à Café
+        # ETANT DONNE une machine à café
         machine = CoffeMachine()
-        
-        # Quand on insère une 50cts
-        machine.insertCoin()
-            
+        # QUAND on insère une pièce de 50cts
+        machine.insert50cts()
         # ALORS un café est servi
         machine.serveCoffee()
-        
         # ET l'argent est encaissé
         machine.cashMoney()
         
-    
+    def test_un_euro(self):
+        # ETANT DONNE une machine à café
+        machine = CoffeMachine()
+        # QUAND on insère une pièce de un euro
+        machine.insertOneEuro()
+        # ALORS la machine sert un café
+        machine.serveCoffee()
+        # ET l'argent est encaissé
+        machine.cashMoney()
